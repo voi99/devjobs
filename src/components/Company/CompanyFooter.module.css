@@ -1,0 +1,48 @@
+.company-footer {
+   padding: 1rem 1.5rem;
+   background-color: var(--white);
+}
+
+.content-wrapper {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+}
+
+.content-wrapper h3 {
+   margin: 0;
+}
+
+.content-wrapper p {
+   margin: 0.5rem 0 0;
+}
+
+.job-info {
+   display: none;
+}
+
+.content-wrapper a {
+   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+   .content-wrapper {
+      justify-content: space-between;
+   }
+
+   .job-info {
+      display: block;
+   }
+
+   .content-wrapper a {
+      width: auto;
+   }
+}
+
+@media only screen and (min-width: 1240px) {
+   .content-wrapper {
+      max-width: 1024px;
+      margin: auto;
+   }
+}

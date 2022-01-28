@@ -1,0 +1,102 @@
+.job-details {
+   border-radius: 0.4rem;
+   background-color: var(--white);
+   margin: 13rem auto 2.5rem;
+   width: 90vw;
+   display: flex;
+   flex-direction: column;
+   padding: 1.5rem;
+   align-items: flex-start;
+   justify-content: center;
+   gap: 1.5rem;
+   transition: background-color 1s;
+}
+
+.job-details-header {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   width: 100%;
+}
+
+.short-info {
+   display: flex;
+   align-items: flex-end;
+   color: var(--grey-text);
+}
+
+.short-info-wrapper {
+   margin-bottom: 2.5rem;
+}
+
+.job-details-header h4,
+.job-details-header h2 {
+   margin: 0.55rem 0;
+}
+
+.job-details-location {
+   color: var(--violet);
+}
+
+ul {
+   padding-left: 0;
+}
+
+ol {
+   padding-left: 0;
+   list-style: none;
+   counter-reset: counter;
+}
+
+li {
+   color: var(--grey-text);
+}
+
+ul li {
+   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+ul li::marker {
+   color: var(--violet);
+}
+
+ol li {
+   display: flex;
+   justify-content: flex-start;
+   counter-increment: counter;
+   margin: 0;
+   padding: 0.5rem 0;
+}
+
+ol li::before {
+   content: counter(counter) ' ';
+   font-weight: bold;
+   color: var(--violet);
+   padding-right: 1.5rem;
+}
+
+p {
+   color: var(--grey-text);
+}
+
+@media only screen and (min-width: 768px) {
+   .job-details {
+      margin: 6.5rem auto 2.5rem;
+      padding: 2rem 2.5rem;
+   }
+
+   .job-details-header {
+      flex-direction: row;
+      align-items: center;
+   }
+
+   .short-info-wrapper {
+      margin-bottom: 0;
+   }
+}
+
+@media only screen and (min-width: 1240px) {
+   .job-details {
+      max-width: 1024px;
+   }
+}

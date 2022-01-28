@@ -1,0 +1,10 @@
+.main {
+   margin: 5rem auto;
+   padding: 0.5rem 1.8rem 2.5rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.load-more-btn {
+   margin: 1rem auto;
+}

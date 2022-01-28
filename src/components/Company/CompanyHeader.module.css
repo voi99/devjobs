@@ -1,0 +1,70 @@
+.company-header-section {
+   height: 13rem;
+   background-color: var(--white);
+   position: absolute;
+   bottom: -11.5rem;
+   width: 90vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 0.4rem;
+   transition: background-color 1s;
+}
+
+.logo {
+   width: 3rem;
+   height: 3rem;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 70%;
+   position: absolute;
+   top: -1.4rem;
+   border-radius: 0.6rem;
+}
+
+.company-info {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: column;
+   width: 80%;
+   padding: 1rem;
+}
+
+.company-info h3 {
+   text-align: center;
+   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+   .company-header-section {
+      height: 8rem;
+      flex-direction: row;
+      justify-content: stretch;
+      bottom: -5rem;
+   }
+
+   .logo {
+      position: static;
+      top: auto;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 0;
+   }
+
+   .company-info {
+      flex-direction: row;
+      padding: 1rem 2.5rem;
+      flex: 1;
+   }
+
+   .company-info h3 {
+      text-align: left;
+   }
+}
+
+@media only screen and (min-width: 1240px) {
+   .company-header-section {
+      max-width: 1024px;
+   }
+}

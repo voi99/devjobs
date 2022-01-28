@@ -1,0 +1,19 @@
+.jobs {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 2.5rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+   .jobs {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media only screen and (min-width: 1240px) {
+   .jobs {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1024px;
+      margin: auto;
+   }
+}

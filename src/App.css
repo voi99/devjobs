@@ -1,0 +1,40 @@
+.App {
+   transition: background-color 1.5s;
+   background-color: var(--light-grey);
+   min-height: 100vh;
+   height: 100%;
+}
+
+.dark.App {
+   background-color: var(--midnight);
+   --white: var(--very-dark-blue);
+   --dark-grey: var(--grey-text);
+   --grey-text: #9daec2;
+}
+
+.dark h1,
+.dark h2,
+.dark h3 {
+   color: #ffffff;
+}
+
+.dark .btn-1 {
+   color: #ffffff;
+}
+
+.dark .btn-2 {
+   background-color: #303642;
+   color: #ffffff;
+}
+
+.dark .btn-2:hover {
+   background-color: var(--grey);
+}
+
+.dark label {
+   color: #ffffff;
+}
+
+.dark .filter-icon-mobile {
+   filter: brightness(0) invert(1);
+}

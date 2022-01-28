@@ -1,0 +1,39 @@
+.input-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem 0.4rem;
+}
+
+.input-wrapper img {
+   padding: 0 0.5rem 0 0.3rem;
+   display: none;
+}
+
+.input {
+   border: none;
+   color: var(--grey-text);
+   background-color: var(--white);
+   font-family: inherit;
+   width: 100%;
+   transition: 1s;
+   line-height: 20px;
+}
+
+.input:focus {
+   outline: none;
+}
+
+.location-input-desktop {
+   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+   .location-input-desktop {
+      display: flex;
+   }
+
+   .input-wrapper img {
+      display: inline-block;
+   }
+}

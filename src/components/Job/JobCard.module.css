@@ -1,0 +1,46 @@
+.card {
+   border-radius: 0.5rem;
+   background-color: var(--white);
+   position: relative;
+   padding: 2rem;
+   height: 100%;
+   transition: all 1s;
+}
+
+.logo {
+   width: 2.8rem;
+   height: 2.8rem;
+   background-repeat: no-repeat;
+   background-position: center center;
+   border-radius: 0.7rem;
+   position: absolute;
+   top: -1.4rem;
+   transition: 0.8s;
+}
+
+.card:hover .logo {
+   transform: scale(1.25);
+   background-position: center;
+}
+
+.card:hover h3 {
+   color: var(--violet);
+}
+
+.card:hover {
+   box-shadow: 0 8px 10px 0 rgb(0 0 0 / 20%);
+}
+
+.short-info {
+   display: flex;
+   align-items: flex-end;
+   color: var(--dark-grey);
+}
+
+li {
+   margin-left: 0.9rem;
+}
+
+.job-location {
+   color: var(--violet);
+}
