@@ -7,7 +7,7 @@ import Search from '../Search/Search'
 import CompanyHeader from '../Company/CompanyHeader'
 import { Link } from 'react-router-dom'
 
-const MainHeader = ({ type }) => {
+const MainHeader = ({ type, setPropertiesFunc }) => {
    const ctx = useContext(ThemeContext)
 
    return (
@@ -30,7 +30,11 @@ const MainHeader = ({ type }) => {
                <img src={moon} alt='dark-theme' />
             </div>
          </div>
-         {type === 'search' ? <Search /> : <CompanyHeader />}
+         {type === 'search' ? (
+            <Search setPropertiesFunc={setPropertiesFunc} />
+         ) : (
+            <CompanyHeader />
+         )}
       </header>
    )
 }

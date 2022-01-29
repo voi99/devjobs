@@ -3,28 +3,64 @@ import styles from './HomePage.module.css'
 import jobs from '../api/data.json'
 import JobsList from '../components/Job/JobsList'
 import Animate from '../components/animations/Animate'
-import Header from '../components/Header/MainHeader'
+import MainHeader from '../components/Header/MainHeader'
+import { useCallback } from 'react/cjs/react.development'
 
 const HomePage = () => {
-   const [filteredJobs, setFilteredJobs] = useState(jobs)
-   const [loaded, setLoaded] = useState(8)
+   const [filteredJobs, setFilteredJobs] = useState([])
+   const [load, setLoad] = useState(8)
+   const [searchProperties, setSearchProperties] = useState({
+      first: null,
+      second: null,
+      third: false,
+   })
+
+   const searchPropertiesHandler = useCallback((searchProps) => {
+      setSearchProperties(searchProps)
+   }, [])
 
    useEffect(() => {
-      const loadJobs = jobs.slice(0, loaded)
-      setFilteredJobs(loadJobs)
-   }, [loaded])
+      let jobsFiltered = jobs
+      if (searchProperties.first) {
+         jobsFiltered = jobsFiltered.filter(
+            (job) =>
+               job.company
+                  .toLowerCase()
+                  .includes(searchProperties.first.toLowerCase()) ||
+               job.position
+                  .toLowerCase()
+                  .includes(searchProperties.first.toLowerCase())
+         )
+      }
+      if (searchProperties.second) {
+         jobsFiltered = jobsFiltered.filter((job) =>
+            job.location
+               .toLowerCase()
+               .includes(searchProperties.second.toLowerCase())
+         )
+      }
+      if (searchProperties.third) {
+         jobsFiltered = jobsFiltered.filter(
+            (job) => job.contract === 'Full Time'
+         )
+      }
+      setFilteredJobs(jobsFiltered)
+   }, [searchProperties])
 
    const loadMoreHandler = () => {
-      const loadMore = loaded + 3
-      setLoaded(loadMore)
+      const loadMore = load + 3
+      setLoad(loadMore)
    }
 
    return (
       <Fragment>
-         <Header type='search' />
+         <MainHeader
+            type='search'
+            setPropertiesFunc={searchPropertiesHandler}
+         />
          <Animate className={styles.main}>
-            <JobsList jobs={filteredJobs} />
-            {loaded < jobs.length && (
+            <JobsList jobs={filteredJobs} load={load} />
+            {load < filteredJobs.length && (
                <button
                   className={`btn btn-1 ${styles['load-more-btn']}`}
                   onClick={loadMoreHandler}

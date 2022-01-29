@@ -18,6 +18,7 @@
    width: 100%;
    transition: 1s;
    line-height: 20px;
+   font-size: 16px;
 }
 
 .input:focus {
@@ -29,6 +30,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+   .input-wrapper {
+      border-right: 0.1em solid #65809828;
+   }
+
    .location-input-desktop {
       display: flex;
    }

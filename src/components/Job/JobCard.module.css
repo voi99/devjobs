@@ -24,7 +24,7 @@
 }
 
 .card:hover h3 {
-   color: var(--violet);
+   color: var(--grey-text);
 }
 
 .card:hover {
