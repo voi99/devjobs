@@ -4,6 +4,13 @@
    gap: 2.5rem 1rem;
 }
 
+.empty {
+   text-align: center;
+   font-weight: bold;
+   font-size: 20px;
+   color: var(--grey-text);
+}
+
 @media only screen and (min-width: 768px) {
    .jobs {
       grid-template-columns: repeat(2, 1fr);

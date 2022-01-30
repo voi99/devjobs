@@ -1,0 +1,54 @@
+.backdrop {
+   height: 100vh;
+   width: 100vw;
+   background-color: #0000004f;
+   position: fixed;
+   z-index: 2;
+}
+
+.modal-form {
+   position: fixed;
+   padding: 0.5rem 0;
+   background-color: var(--white);
+   z-index: 3;
+   width: calc(100vw - 3.6rem);
+   height: 12rem;
+   margin: auto;
+   left: 0;
+   right: 0;
+   top: calc(50vh - 6rem);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 1.2rem;
+   border-radius: 0.4rem;
+   padding: 0.4rem 1rem;
+}
+
+.modal-form div:nth-child(1) {
+   position: relative;
+}
+
+.modal-form div:nth-child(1):after {
+   position: absolute;
+   bottom: 0;
+   left: -1rem;
+   content: '';
+   width: calc(100vw - 3.6rem);
+   border-bottom: 0.1em solid #65809828;
+}
+
+.modal-form img {
+   display: inline-block;
+}
+
+.modal-form button {
+   width: 100%;
+}
+
+.full-time-wrapper {
+   display: flex;
+   align-items: center;
+   padding-left: 0.3rem;
+}
