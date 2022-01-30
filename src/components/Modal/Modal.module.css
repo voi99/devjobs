@@ -1,7 +1,7 @@
 .backdrop {
    height: 100vh;
    width: 100vw;
-   background-color: #0000004f;
+   background-color: #000000c9;
    position: fixed;
    z-index: 2;
 }
@@ -51,4 +51,23 @@
    display: flex;
    align-items: center;
    padding-left: 0.3rem;
+}
+
+.dark.modal-form,
+.dark.modal-form input {
+   background-color: var(--midnight);
+   color: var(--white);
+}
+
+.dark.modal-form [type='checkbox'] {
+   background-color: var(--dark-grey);
+}
+
+@media only screen and (min-width: 768px) {
+   .backdrop {
+      display: none;
+   }
+   .modal-form {
+      display: none;
+   }
 }

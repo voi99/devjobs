@@ -7,7 +7,7 @@ import useSearch from '../hooks/use-search'
 
 const HomePage = () => {
    const [filteredJobs, searchPropertiesHandler] = useSearch()
-   const [load, setLoad] = useState(8)
+   const [load, setLoad] = useState(12)
 
    const loadMoreHandler = () => {
       const loadMore = load + 3
